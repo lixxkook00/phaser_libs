@@ -3,7 +3,7 @@ import { PrivateLayout } from '../layout';
 import { NotFoundView } from '../views';
 import AboutView from '../views/About';
 import DevView from '../views/Dev';
-import WelcomeView from '../views/welcome';
+import Home from '../views/Home';
 
 /**
  * List of routes available  for authenticated users
@@ -14,7 +14,7 @@ const PrivateRoutes = () => {
   return (
     <PrivateLayout>
       <Routes>
-        <Route path="/" element={<WelcomeView />} />
+        <Route path="/" element={<Home />} />
         <Route
           // This fixes other tabs with unfinished auth flow
           path="auth/*"
