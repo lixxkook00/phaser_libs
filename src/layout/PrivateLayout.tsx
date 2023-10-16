@@ -13,6 +13,7 @@ import {
 } from './config';
 import TopBar from './TopBar';
 import SideBar from './SideBar';
+import LLLogo from '../components/common/LLLogo';
 
 // TODO: change to your app name or other word
 const TITLE_PRIVATE = 'TA Phaser Dev Library'; // Title for pages after authentication
@@ -100,7 +101,7 @@ const PrivateLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
     >
       <Stack component="header">
         <TopBar
-          startNode={<AppIconButton icon="logo" onClick={sidebarOpen ? onLogoClick : onSideBarOpen} />}
+          startNode={<LLLogo />}
           title={title}
         />
 
