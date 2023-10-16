@@ -1,5 +1,5 @@
 import { ComponentType, FunctionComponent, SVGAttributes } from 'react';
-import { APP_ICON_SIZE } from '../config';
+import { APP_ICON_SIZE } from '../../config';
 // SVG assets
 import LogoIcon from './icons/LogoIcon';
 // Material Icons

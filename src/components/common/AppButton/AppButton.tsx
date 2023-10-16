@@ -2,7 +2,7 @@ import { ElementType, FunctionComponent, ReactNode, useMemo } from 'react';
 import Button, { ButtonProps } from '@mui/material/Button';
 import AppIcon from '../AppIcon';
 import AppLink from '../AppLink';
-import { APP_BUTTON_VARIANT } from '../config';
+import { APP_BUTTON_VARIANT } from '../../config';
 
 const MUI_BUTTON_COLORS = ['inherit', 'primary', 'secondary', 'success', 'error', 'info', 'warning'];
 

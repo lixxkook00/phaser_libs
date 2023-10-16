@@ -1,9 +1,11 @@
 import { FunctionComponent, ReactNode, SyntheticEvent, useCallback } from 'react';
 import { Dialog, DialogActions, DialogContent, DialogProps } from '@mui/material';
-import { AppButton } from '..';
+
 import { AppDialogTitle } from './components';
-import { ColorName } from '../../utils/style';
+
 import { useDialogMinWidth } from './utils';
+import { ColorName } from '../../../utils/style';
+import AppButton from '../AppButton';
 
 interface Props extends DialogProps {
   data?: unknown;

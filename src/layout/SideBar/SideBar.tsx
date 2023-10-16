@@ -5,8 +5,8 @@ import { useAppStore } from '../../store/AppStore';
 import { LinkToPage } from '../../utils/type';
 import { useEventLogout, useEventSwitchDarkMode, useIsAuthenticated, useOnMobile } from '../../hooks';
 import SideBarNavList from './SideBarNavList';
+import UserInfo from '../../components/common/UserInfo';
 import { SIDE_BAR_WIDTH, TOP_BAR_DESKTOP_HEIGHT } from '../config';
-import UserInfo from '../../components/UserInfo';
 
 interface Props extends Pick<DrawerProps, 'anchor' | 'className' | 'open' | 'variant' | 'onClose'> {
   items: Array<LinkToPage>;

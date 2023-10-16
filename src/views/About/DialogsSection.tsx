@@ -5,7 +5,7 @@ import {
   CommonDialog as MessageDialog,
   CommonDialog as ConfirmationDialog,
   CompositionDialog as EmailEditDialog,
-} from '../../components/dialogs';
+} from '../../components/common/dialogs';
 
 /**
  * Renders demo section for Dialogs

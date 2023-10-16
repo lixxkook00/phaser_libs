@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import AppIcon, { ICONS } from './AppIcon';
-import { APP_ICON_SIZE } from '../config';
+import { APP_ICON_SIZE } from '../../config';
 import { randomColor, randomText } from '../../utils';
 
 const ComponentToTest = AppIcon;

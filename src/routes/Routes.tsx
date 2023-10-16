@@ -1,7 +1,7 @@
 import { useCallback, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { AppLoading } from '../components';
-import { useAuthWatchdog, useIsAuthenticated } from '../hooks';
+import { useAuthWatchdog } from '../hooks';
 import PublicRoutes from './PublicRoutes';
 import PrivateRoutes from './PrivateRoutes';
 
@@ -12,7 +12,8 @@ import PrivateRoutes from './PrivateRoutes';
 const Routes = () => {
   const [loading, setLoading] = useState(true);
   const [refresh, setRefresh] = useState(0);
-  const isAuthenticated = useIsAuthenticated();
+  // const isAuthenticated = useIsAuthenticated();
+  const isAuthenticated = true;
 
   const afterLogin = useCallback(() => {
     setRefresh((old) => old + 1); // Force re-render

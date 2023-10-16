@@ -1,6 +1,6 @@
 import { FunctionComponent } from 'react';
 import { CircularProgress, CircularProgressProps, LinearProgress, Stack, StackProps } from '@mui/material';
-import { APP_LOADING_COLOR, APP_LOADING_SIZE, APP_LOADING_TYPE } from '../config';
+import { APP_LOADING_COLOR, APP_LOADING_SIZE, APP_LOADING_TYPE } from '../../config';
 
 interface Props extends StackProps {
   color?: CircularProgressProps['color'];

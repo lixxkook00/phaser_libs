@@ -1,6 +1,6 @@
 import { FunctionComponent, PropsWithChildren } from 'react';
 import { Stack, StackProps, useMediaQuery, useTheme } from '@mui/material';
-import { CONTENT_MAX_WIDTH, CONTENT_MIN_WIDTH } from '../config';
+import { CONTENT_MAX_WIDTH, CONTENT_MIN_WIDTH } from '../../config';
 
 /**
  * Renders View container composition with limited width

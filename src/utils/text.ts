@@ -47,3 +47,17 @@ export function randomColor() {
   const color = Math.floor(Math.random() * 16777215).toString(16);
   return '#' + color;
 }
+
+export function formatCode(code: string): string {
+  const tabWidth = 6; // Adjust the desired tab width here
+  const lines = code.trim().split('\n');
+  const formattedLines = lines.map(line => {
+    const leadingSpacesMatch = line.match(/^\s*/);
+    const leadingSpaces = leadingSpacesMatch ? leadingSpacesMatch[0] : '';
+    const tabsCount = Math.floor(leadingSpaces.length / tabWidth);
+    const tabs = '\t'.repeat(tabsCount);
+    const spaces = ' '.repeat(leadingSpaces.length % tabWidth);
+    return tabs + spaces + line.trim();
+  });
+  return formattedLines.join('\n');
+}

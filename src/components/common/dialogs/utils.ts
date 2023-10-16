@@ -1,5 +1,5 @@
 import { useTheme } from '@mui/material';
-import { useOnWideScreen } from '../../hooks/layout';
+import { useOnWideScreen } from '../../../hooks';
 
 /**
  * Returns the width of the dialog's body based on the screen size

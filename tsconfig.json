@@ -3,7 +3,7 @@
   "compilerOptions": {
     "lib": ["es6", "dom", "dom.iterable", "esnext"],
     "module": "esnext",
-    "target": "esnext"
+    "target": "esnext",
   },
   "include": ["src"]
 }

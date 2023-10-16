@@ -1,7 +1,7 @@
 import { forwardRef, ReactNode } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
 import MuiLink, { LinkProps as MuiLinkProps } from '@mui/material/Link';
-import { APP_LINK_COLOR, APP_LINK_UNDERLINE } from '../config';
+import { APP_LINK_COLOR, APP_LINK_UNDERLINE } from '../../config';
 
 export const EXTERNAL_LINK_PROPS = {
   target: '_blank',

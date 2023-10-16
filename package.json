@@ -1,11 +1,11 @@
 {
   "name": "react-typescript-material",
   "version": "2.1.19",
-  "description": "_DESCRIPTION_",
+  "description": "Phaser Dev Libc",
   "author": {
-    "name": "Anton Karpenko",
-    "email": "i@karpolan.com",
-    "url": "https://karpolan.com"
+    "name": "Linh",
+    "email": "linhlinhkook99@gmail.com",
+    "url": ""
   },
   "private": true,
   "keywords": [
@@ -34,8 +34,10 @@
     "@emotion/styled": "latest",
     "@mui/icons-material": "latest",
     "@mui/material": "latest",
+    "copy-to-clipboard": "^3.3.3",
     "date-fns": "latest",
     "react": "latest",
+    "react-code-blocks": "^0.1.4",
     "react-dom": "latest",
     "react-router-dom": "latest",
     "react-scripts": "latest",
@@ -53,6 +55,7 @@
     "@types/react-dom": "latest",
     "@types/react-router-dom": "latest",
     "prettier": "latest",
+    "tailwindcss": "^3.3.3",
     "typescript": "latest"
   },
   "browserslist": {

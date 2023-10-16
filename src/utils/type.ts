@@ -10,3 +10,9 @@ export type LinkToPage = {
   title?: string; // Title or primary text to display
   subtitle?: string; // Sub-title or secondary text to display
 };
+
+
+export type ILLCode = {
+  title : string,
+  code : string,
+}

@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import AppIconButton, { MUI_ICON_BUTTON_COLORS } from './AppIconButton';
-import { APP_ICON_SIZE } from '../config';
+import { APP_ICON_SIZE } from '../../config';
 import { ObjectPropByName, capitalize, randomColor, randomText } from '../../utils';
 import { ICONS } from '../AppIcon/AppIcon';
 

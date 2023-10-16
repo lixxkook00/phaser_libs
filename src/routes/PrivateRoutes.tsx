@@ -3,7 +3,7 @@ import { PrivateLayout } from '../layout';
 import { NotFoundView } from '../views';
 import AboutView from '../views/About';
 import DevView from '../views/Dev';
-import WelcomeView from '../views/Welcome';
+import WelcomeView from '../views/welcome';
 
 /**
  * List of routes available  for authenticated users
