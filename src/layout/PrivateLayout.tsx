@@ -16,7 +16,7 @@ import SideBar from './SideBar';
 import LLLogo from '../components/common/LLLogo';
 
 // TODO: change to your app name or other word
-const TITLE_PRIVATE = 'TA Phaser Dev Library'; // Title for pages after authentication
+const TITLE_PRIVATE = 'TA Studio Dev Library'; // Title for pages after authentication
 
 /**
  * SideBar navigation items with links
