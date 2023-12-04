@@ -32,7 +32,7 @@
   "dependencies": {
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
-    "@mui/icons-material": "latest",
+    "@mui/icons-material": "^5.14.19",
     "@mui/material": "latest",
     "copy-to-clipboard": "^3.3.3",
     "date-fns": "latest",
