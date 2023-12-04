@@ -1,10 +1,10 @@
-import { AppView } from "../../components"
-import LLCodeBlock from "../../components/common/LLCodeBlock"
-import CODE from "../../data"
+import { AppView } from "components"
+import LLCodeBlock from "components/common/LLCodeBlock"
+import CODE from "data"
 
 export default function Home() {
   return (
-    <AppView>
+    <AppView className="mb-20">
       {
         CODE.map((item, index) => {
           return (

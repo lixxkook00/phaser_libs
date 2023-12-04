@@ -108,12 +108,12 @@ const CODE : Array<ILLCode> = [
         }
       `
     },
-    {
-      title: 'Updating...',
-      code: `
+    // {
+    //   title: 'Updating...',
+    //   code: `
 
-      `
-    },
+    //   `
+    // },
 ]
 
 export default CODE;

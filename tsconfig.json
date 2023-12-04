@@ -4,6 +4,10 @@
     "lib": ["es6", "dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "target": "esnext",
+    "baseUrl": "./src",
+    // "paths" : {
+    //   "@/*": ["*"]
+    // }
   },
   "include": ["src"]
 }

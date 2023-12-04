@@ -1,9 +1,10 @@
-import { StackProps, Typography } from "@mui/material";
-import { FunctionComponent } from "react";
+import { Button, StackProps, Typography } from "@mui/material";
+import { FunctionComponent, useState } from "react";
 import { CodeBlock } from "react-code-blocks";
 import LLCodeBlockTheme from "./LLCodeBlockTheme";
 import { formatCode } from "../../../utils";
 import copy from "copy-to-clipboard";
+import { toast } from "react-toastify";
 
 interface Props extends StackProps {
     theme?: any;
@@ -15,7 +16,7 @@ interface Props extends StackProps {
 
 const codeDefault = `
     // add code for this template
-`
+`;
 
 const LLCodeBlock: FunctionComponent<Props> = ({
     theme = LLCodeBlockTheme,
@@ -25,12 +26,30 @@ const LLCodeBlock: FunctionComponent<Props> = ({
     showLineNumbers = true,
 }) => {
 
-    return (
-        <div onClick={() => copy(code)} className="flex">
-            <Typography variant="h5" mt={4} mb={1}>
-                {title}
-            </Typography>
+const [isExpand, setExpand] = useState(false);
 
+const toggleHeight = () => {
+    setExpand(!isExpand);
+};
+
+const handleCopy = () => {
+    copy(code);
+    toast.success(
+        `Coppied ${title}`, 
+        {
+            position: 'bottom-right',
+            autoClose: 500,
+        }
+    )
+}
+
+return (
+    <div className="relative mb-8">
+        <Typography variant="h5" mt={4} mb={1}>
+            {title}
+        </Typography>
+
+        <div onClick={handleCopy} className={`${isExpand ? 'max-h-none' : 'max-h-36'} relative overflow-hidden border border-slate-600 rounded-lg hover:border-green-700 hover:cursor-copy`}>
             <CodeBlock
                 text={formatCode(code)}
                 language={type}
@@ -38,7 +57,13 @@ const LLCodeBlock: FunctionComponent<Props> = ({
                 theme={theme}
             />
         </div>
-    )
-}
+
+
+        <div className="absolute flex justify-center inset-x-0 bottom-0 transform translate-y-full">
+            <Button onClick={toggleHeight} variant="outlined" className="mt-6">{isExpand ? 'View less' : 'View more'}</Button>
+        </div>
+    </div>
+);
+};
 
 export default LLCodeBlock;
