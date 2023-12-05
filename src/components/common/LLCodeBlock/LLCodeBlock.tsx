@@ -44,8 +44,8 @@ const handleCopy = () => {
 }
 
 return (
-    <div className="relative mb-8">
-        <Typography variant="h5" mt={4} mb={1}>
+    <div className="relative mb-2">
+        <Typography variant="h5" mt={2} mb={1}>
             {title}
         </Typography>
 
@@ -59,7 +59,7 @@ return (
         </div>
 
 
-        <div className="absolute flex justify-center inset-x-0 bottom-0 transform translate-y-full">
+        <div className="flex justify-center">
             <Button onClick={toggleHeight} variant="outlined" className="mt-6">{isExpand ? 'View less' : 'View more'}</Button>
         </div>
     </div>

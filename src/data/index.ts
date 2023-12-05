@@ -108,6 +108,70 @@ const CODE : Array<ILLCode> = [
         }
       `
     },
+    {
+      title: 'Glow Effect',
+      code: `
+      glow(element) {
+        const fx1 = element.postFX.addGlow(0xFFDE4C, 0, 0, false, 0.1, 32);
+        this.tweens.add({
+            targets: fx1,
+            outerStrength: 8,
+            yoyo: true,
+            loop: -1,
+            ease: 'sine.inout'
+        });
+      }
+      `
+    },
+    {
+      title: 'Video Carousel',
+      code: `
+      changeSlide() {
+        const videos = [this.video, this.video2];
+        const currentVideo = this.currrentVideo === 1 ? 0 : 1;
+        const nextVideo = this.currrentVideo === 1 ? 1 : 0;
+    
+        videos[currentVideo].setAlpha(0);
+        videos[currentVideo].pause();
+        TweenTask.ZoomOut(videos[currentVideo]);
+    
+        videos[nextVideo].setAlpha(1);
+        videos[nextVideo].play();
+        TweenTask.ZoomIn(videos[nextVideo], { scale: 1 });
+    
+        this.dots[currentVideo].setAlpha(0.5);
+        this.dots[nextVideo].setAlpha(1);
+    
+        this.currrentVideo = nextVideo + 1;
+      }
+      `
+    },
+    {
+      title: 'Text Animation',
+      code: `
+      this.txt_1 = this.add.image(122, 108, "atlas", "txt_1");
+
+      const fx = this.txt_1.preFX.addReveal(0.1, 0, 0);
+      this.tweens.add({
+          targets: fx,
+          progress: 1,
+          yoyo: false,
+          repeat: false,
+          duration: 1000,
+          onComplete : () => {
+            this.txt_2 = this.add.image(161, 132, "atlas", "txt_2");
+            const fx = this.txt_2.preFX.addReveal(0.1, 0, 0);
+            this.tweens.add({
+                targets: fx,
+                progress: 1,
+                yoyo: false,
+                repeat: false,
+                duration: 1000
+            });
+          }
+      });
+      `
+    },
     // {
     //   title: 'Updating...',
     //   code: `
