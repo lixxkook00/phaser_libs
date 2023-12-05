@@ -172,6 +172,51 @@ const CODE : Array<ILLCode> = [
       });
       `
     },
+    {
+      title: 'Input Element',
+      code: `
+      export default class Input extends Phaser.GameObjects.Container {
+        constructor(scene, x, y) {
+          super(scene, x, y);
+          scene.add.existing(this);
+      
+          /**
+           * @type {HTMLVideoElement}
+           */
+          this.input = document.createElement('input');
+          this.input.className = 'input';
+          this.input.style.height = '80px';
+          this.input.style.width = '375px';
+          this.input.style.background = 'none';
+          this.input.style.border = 'none';
+          this.input.style.outline = 'none';
+          this.input.style.borderRadius = '40px';
+          this.input.style.textAlign = 'center';
+          this.input.style.fontSize = '60px';
+          this.input.style.letterSpacing = '6px';
+          this.input.maxLength = 4;
+    
+          this.setAlpha(0);
+    
+          this.dom = scene.add.dom(0, 0, this.input).setDisplayOrigin(0);
+    
+          this.add([this.dom]);
+        }
+    
+        get value() {
+          return this.input.value;
+        }
+    
+        show() {
+          TweenTask.FadeIn(this);
+        }
+    
+        hidden() {
+          TweenTask.FadeOut(this);
+        }
+    }
+      `
+    },
     // {
     //   title: 'Updating...',
     //   code: `
