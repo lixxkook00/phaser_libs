@@ -34,6 +34,7 @@ const SideBarNavItem: FunctionComponent<Props> = ({
       href="" // Hard reset for .href property, otherwise links are always opened in new tab :(
       openInNewTab={openInNewTab}
       onClick={onClick}
+      className='mb-4'
     >
       <ListItemIcon>{icon && <AppIcon icon={icon} />}</ListItemIcon>
       <ListItemText primary={title} secondary={subtitle} />

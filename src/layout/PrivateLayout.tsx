@@ -23,15 +23,45 @@ const TITLE_PRIVATE = 'TA Studio Dev Library'; // Title for pages after authenti
  */
 const SIDE_BAR_ITEMS: Array<LinkToPage> = [
   {
-    title: 'Home',
+    title: 'All',
     path: '/',
     icon: 'home',
   },
   {
-    title: 'Profile (404)',
-    path: '/user',
-    icon: 'account',
+    title: 'Tweens',
+    path: '/tweens',
+    icon: 'animation',
   },
+  {
+    title: 'Hand',
+    path: '/hand',
+    icon: 'hand',
+  },
+  {
+    title: 'HTML Element',
+    path: '/html-element',
+    icon: 'html',
+  },
+  {
+    title: 'Events',
+    path: '/events',
+    icon: 'code',
+  },
+  {
+    title: 'Effect',
+    path: '/effect',
+    icon: 'effect',
+  },
+  {
+    title: 'Others',
+    path: '/others',
+    icon: 'folderspecial',
+  },
+  // {
+  //   title: 'Profile (404)',
+  //   path: '/user',
+  //   icon: 'account',
+  // },
   {
     title: 'About',
     path: '/about',

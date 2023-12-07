@@ -4,6 +4,7 @@ import { ILLCode } from "../utils";
 const CODE : Array<ILLCode> = [
     {
       title: 'Follow Hands Tween',
+      type: 'hand',
       code: `
       TweenTask.MoveTo(this.hand, 354, 570, {
         duration: 1000,
@@ -21,6 +22,7 @@ const CODE : Array<ILLCode> = [
     },
     {
       title: 'Mutiple Hands Tween',
+      type: 'hand',
       code: `
         const handMap = [
           { x: 262, y: 493 },
@@ -49,6 +51,7 @@ const CODE : Array<ILLCode> = [
     },
     {
       title: 'Selection',
+      type: 'events',
       code: `
         // handle select
         this.selections.forEach((item, index) => {
@@ -73,6 +76,7 @@ const CODE : Array<ILLCode> = [
     },
     {
         title : 'Drag Element',
+        type: 'events',
         code : `
         setDrag(element, elementTarget, index) {
           const defaultPosition = {
@@ -110,6 +114,7 @@ const CODE : Array<ILLCode> = [
     },
     {
       title: 'Glow Effect',
+      type: 'effect',
       code: `
       glow(element) {
         const fx1 = element.postFX.addGlow(0xFFDE4C, 0, 0, false, 0.1, 32);
@@ -125,6 +130,7 @@ const CODE : Array<ILLCode> = [
     },
     {
       title: 'Video Carousel',
+      type: 'others',
       code: `
       changeSlide() {
         const videos = [this.video, this.video2];
@@ -148,6 +154,7 @@ const CODE : Array<ILLCode> = [
     },
     {
       title: 'Text Animation',
+      type: 'tweens',
       code: `
       this.txt_1 = this.add.image(122, 108, "atlas", "txt_1");
 
@@ -174,6 +181,7 @@ const CODE : Array<ILLCode> = [
     },
     {
       title: 'Input Element',
+      type: 'html-element',
       code: `
       export default class Input extends Phaser.GameObjects.Container {
         constructor(scene, x, y) {

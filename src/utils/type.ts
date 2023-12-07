@@ -14,5 +14,6 @@ export type LinkToPage = {
 
 export type ILLCode = {
   title : string,
+  type: string,
   code : string,
 }

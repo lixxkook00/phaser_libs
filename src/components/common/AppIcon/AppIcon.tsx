@@ -20,6 +20,12 @@ import PersonAddIcon from '@mui/icons-material/PersonAdd';
 import PersonIcon from '@mui/icons-material/Person';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import NotificationsIcon from '@mui/icons-material/NotificationsOutlined';
+import SwipeUpIcon from '@mui/icons-material/SwipeUp';
+import AnimationIcon from '@mui/icons-material/Animation';
+import HtmlIcon from '@mui/icons-material/Html';
+import CodeIcon from '@mui/icons-material/Code';
+import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import FolderSpecialIcon from '@mui/icons-material/FolderSpecial';
 
 /**
  * How to use:
@@ -48,6 +54,12 @@ export const ICONS: Record<string, ComponentType> = {
   login: PersonIcon,
   logout: ExitToAppIcon,
   notifications: NotificationsIcon,
+  animation: AnimationIcon,
+  hand : SwipeUpIcon,
+  html: HtmlIcon,
+  code: CodeIcon,
+  effect: AutoAwesomeIcon,
+  folderspecial: FolderSpecialIcon,
 };
 
 export interface AppIconProps extends SVGAttributes<SVGElement> {

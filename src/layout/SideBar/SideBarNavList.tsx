@@ -18,7 +18,7 @@ interface Props {
  */
 const SideBarNavList: FunctionComponent<Props> = ({ items, showIcons, onClick, ...restOfProps }) => {
   return (
-    <List component="nav" {...restOfProps}>
+    <List component="nav" {...restOfProps} sx={{height: '90vh'}}>
       {items.map(({ icon, path, title }) => (
         <SideBarNavItem
           key={`${title}-${path}`}

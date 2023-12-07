@@ -1,4 +1,4 @@
-{
+ {
   "name": "react-typescript-material",
   "typescript": "^4.5.2",
   "description": "Phaser Dev Libc",
@@ -21,7 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "dev": "react-scripts start",
+    "dev": "react-scripts start",                                                                                               
     "dev:update": "npm i && react-scripts start",
     "format": "prettier ./src --write",
     "format:all": "prettier . --write",

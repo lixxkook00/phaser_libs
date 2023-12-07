@@ -3,7 +3,7 @@ import { PrivateLayout } from '../layout';
 import { NotFoundView } from '../views';
 import AboutView from '../views/About';
 import DevView from '../views/Dev';
-import Home from '../views/Home';
+import CodeView from '../views/CodeView';
 
 /**
  * List of routes available  for authenticated users
@@ -11,18 +11,31 @@ import Home from '../views/Home';
  * @routes PrivateRoutes
  */
 const PrivateRoutes = () => {
+
+  const ROUTES = ["", "tweens", "hand", "html-element", "events", "effect", "others"];
+
+  const RouteComponents = ROUTES.map((path, index) => (
+    <Route key={index} path={`/${path}`} element={<CodeView key={index} type={path} />} />
+  ));
+
   return (
     <PrivateLayout>
       <Routes>
-        <Route path="/" element={<Home />} />
+        
+        {
+          RouteComponents
+        }
+        
         <Route
           // This fixes other tabs with unfinished auth flow
           path="auth/*"
           element={<Navigate to="/" replace />}
         />
+        
         <Route path="about" element={<AboutView />} />
-        {process.env.REACT_APP_DEBUG && <Route path="dev" element={<DevView />} />}
+          {process.env.REACT_APP_DEBUG && <Route path="dev" element={<DevView />} />}
         <Route path="*" element={<NotFoundView />} />
+        
       </Routes>
     </PrivateLayout>
   );
