@@ -14,6 +14,8 @@ export type LinkToPage = {
 
 export type ILLCode = {
   title : string,
-  type: string,
+  type: TLLCategories,
   code : string,
 }
+
+type TLLCategories = 'hand' | 'events' | 'effect' | 'others' | 'tweens' | 'html-element' | 'others'

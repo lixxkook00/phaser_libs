@@ -408,6 +408,18 @@ const CODE : Array<ILLCode> = [
       });
       `
     },
+    {
+      title: 'Start With Full Screen',
+      type: 'events',
+      code: `
+      startWithFullScreen() {
+        this.input.setHitArea(this.add.rectangle(0, 0, ENV.WIDTH, ENV.HEIGHT));
+        this.input.on('pointerdown', (pointer, gameObject) => {
+            this.scene.start(ENV.SCENE.PLAY)
+        });
+      }
+      `
+    },
     // {
     //   title: 'Updating...',
     //   type: 'others',
