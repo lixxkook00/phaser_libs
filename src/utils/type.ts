@@ -18,4 +18,4 @@ export type ILLCode = {
   code : string,
 }
 
-type TLLCategories = 'hand' | 'events' | 'effect' | 'others' | 'tweens' | 'html-element' | 'others'
+type TLLCategories = 'hand' | 'events' | 'effect' | 'others' | 'tweens' | 'html-element' | 'game-object'

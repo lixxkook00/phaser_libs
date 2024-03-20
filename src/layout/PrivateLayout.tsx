@@ -57,11 +57,11 @@ const SIDE_BAR_ITEMS: Array<LinkToPage> = [
     path: '/others',
     icon: 'folderspecial',
   },
-  // {
-  //   title: 'Profile (404)',
-  //   path: '/user',
-  //   icon: 'account',
-  // },
+  {
+    title: 'Game Object',
+    path: '/game-object',
+    icon: 'account',
+  },
   {
     title: 'About',
     path: '/about',
@@ -130,10 +130,7 @@ const PrivateLayout: FunctionComponent<PropsWithChildren> = ({ children }) => {
       }}
     >
       <Stack component="header">
-        <TopBar
-          startNode={<LLLogo />}
-          title={title}
-        />
+        <TopBar startNode={<LLLogo />} title={title} />
 
         <SideBar
           anchor={onMobile ? SIDE_BAR_MOBILE_ANCHOR : SIDE_BAR_DESKTOP_ANCHOR}

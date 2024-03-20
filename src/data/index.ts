@@ -1,11 +1,11 @@
-import { ILLCode } from "../utils";
+import { ILLCode } from '../utils';
+import { videoElementCode } from './video-element';
 
-
-const CODE : Array<ILLCode> = [
-    {
-      title: 'Follow Hands Tween',
-      type: 'hand',
-      code: `
+const CODE: Array<ILLCode> = [
+  {
+    title: 'Follow Hands Tween',
+    type: 'hand',
+    code: `
       TweenTask.MoveTo(this.hand, 354, 570, {
         duration: 1000,
         onUpdate: () => this.tutorial_char_1.setPosition(this.hand.x - 50, this.hand.y - 75),
@@ -18,12 +18,12 @@ const CODE : Array<ILLCode> = [
           )
         }
       })
-      `
-    },
-    {
-      title: 'Mutiple Hands Tween',
-      type: 'hand',
-      code: `
+      `,
+  },
+  {
+    title: 'Mutiple Hands Tween',
+    type: 'hand',
+    code: `
         const handMap = [
           { x: 262, y: 493 },
           { x: 618, y: 609 },
@@ -47,12 +47,12 @@ const CODE : Array<ILLCode> = [
               },
           });
         }
-      `
-    },
-    {
-      title: 'Selection',
-      type: 'events',
-      code: `
+      `,
+  },
+  {
+    title: 'Selection',
+    type: 'events',
+    code: `
         // handle select
         this.selections.forEach((item, index) => {
           // render
@@ -72,12 +72,12 @@ const CODE : Array<ILLCode> = [
             })
           });
         })
-      `
-    },
-    {
-        title : 'Drag Element',
-        type: 'events',
-        code : `
+      `,
+  },
+  {
+    title: 'Drag Element',
+    type: 'events',
+    code: `
         setDrag(element, elementTarget, index) {
           const defaultPosition = {
               x: element.x,
@@ -110,12 +110,12 @@ const CODE : Array<ILLCode> = [
               }
           );
         }
-      `
-    },
-    {
-      title: 'Glow Effect',
-      type: 'effect',
-      code: `
+      `,
+  },
+  {
+    title: 'Glow Effect',
+    type: 'effect',
+    code: `
       glow(element) {
         const fx1 = element.postFX.addGlow(0xFFDE4C, 0, 0, false, 0.1, 32);
         this.tweens.add({
@@ -126,12 +126,12 @@ const CODE : Array<ILLCode> = [
             ease: 'sine.inout'
         });
       }
-      `
-    },
-    {
-      title: 'Video Carousel',
-      type: 'others',
-      code: `
+      `,
+  },
+  {
+    title: 'Video Carousel',
+    type: 'others',
+    code: `
       changeSlide() {
         const videos = [this.video, this.video2];
         const currentVideo = this.currrentVideo === 1 ? 0 : 1;
@@ -150,12 +150,12 @@ const CODE : Array<ILLCode> = [
     
         this.currrentVideo = nextVideo + 1;
       }
-      `
-    },
-    {
-      title: 'Text Animation',
-      type: 'tweens',
-      code: `
+      `,
+  },
+  {
+    title: 'Text Animation',
+    type: 'tweens',
+    code: `
       this.txt_1 = this.add.image(122, 108, "atlas", "txt_1");
 
       const fx = this.txt_1.preFX.addReveal(0.1, 0, 0);
@@ -177,12 +177,12 @@ const CODE : Array<ILLCode> = [
             });
           }
       });
-      `
-    },
-    {
-      title: 'Input Element',
-      type: 'html-element',
-      code: `
+      `,
+  },
+  {
+    title: 'Input Element',
+    type: 'html-element',
+    code: `
       export default class Input extends Phaser.GameObjects.Container {
         constructor(scene, x, y) {
           super(scene, x, y);
@@ -223,12 +223,12 @@ const CODE : Array<ILLCode> = [
           TweenTask.FadeOut(this);
         }
     }
-      `
-    },
-    {
-      title: 'Rock Paper Scissors',
-      type: 'others',
-      code: `
+      `,
+  },
+  {
+    title: 'Rock Paper Scissors',
+    type: 'others',
+    code: `
       rockPaperScissors() {
         TweenTask.FadeIn(this.overlay);
     
@@ -317,12 +317,12 @@ const CODE : Array<ILLCode> = [
     
         this.handleResult(result, selected);
       }
-      `
-    },
-    {
-      title: 'Heart Breathing',
-      type: 'tweens',
-      code: `
+      `,
+  },
+  {
+    title: 'Heart Breathing',
+    type: 'tweens',
+    code: `
       const fx = this.add.image(this.sys.scale.width / 2, this.sys.scale.height / 2, 'heart');
         fx.setScale(9);
 
@@ -355,12 +355,12 @@ const CODE : Array<ILLCode> = [
                 })
             }
         });
-      `
-    },
-    {
-      title: 'Pixelate Amount Fx',
-      type: 'effect',
-      code: `
+      `,
+  },
+  {
+    title: 'Pixelate Amount Fx',
+    type: 'effect',
+    code: `
       const sprite = this.add.image(400, 300, 'pic');
 
       const fx = sprite.preFX.addPixelate(-1);
@@ -387,12 +387,12 @@ const CODE : Array<ILLCode> = [
             })
         }
     });
-      `
-    },
-    {
-      title: 'Shine Effect',
-      type: 'effect',
-      code: `
+      `,
+  },
+  {
+    title: 'Shine Effect',
+    type: 'effect',
+    code: `
       const card = this.add.plane(this.sys.scale.width / 2, this.sys.scale.height / 2, 'card');
 
       card.setScale(2)
@@ -406,27 +406,21 @@ const CODE : Array<ILLCode> = [
           rotateY: 360,
           repeat: -1
       });
-      `
-    },
-    {
-      title: 'Start With Full Screen',
-      type: 'events',
-      code: `
+      `,
+  },
+  {
+    title: 'Start With Full Screen',
+    type: 'events',
+    code: `
       startWithFullScreen() {
         this.input.setHitArea(this.add.rectangle(0, 0, ENV.WIDTH, ENV.HEIGHT));
         this.input.on('pointerdown', (pointer, gameObject) => {
             this.scene.start(ENV.SCENE.PLAY)
         });
       }
-      `
-    },
-    // {
-    //   title: 'Updating...',
-    //   type: 'others',
-    //   code: `
-
-    //   `
-    // },
-]
+      `,
+  },
+  videoElementCode,
+];
 
 export default CODE;
