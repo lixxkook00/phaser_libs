@@ -1,4 +1,5 @@
 import { ILLCode } from '../utils';
+import { setDOMInteractive } from './utils';
 import { videoElementCode } from './video-element';
 
 const CODE: Array<ILLCode> = [
@@ -421,6 +422,7 @@ const CODE: Array<ILLCode> = [
       `,
   },
   videoElementCode,
+  setDOMInteractive,
 ];
 
 export default CODE;
